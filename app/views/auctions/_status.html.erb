@@ -1,0 +1,6 @@
+<% if @product.auction.top_bid.user == current_user.id %>
+  You won the auction!
+<% else %>
+  You lost the auction.
+<% end %>
+

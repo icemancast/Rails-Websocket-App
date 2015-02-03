@@ -14,8 +14,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
 
-gem 'haml-rails'
-gem 'boostrap-sass'
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'puma'
 gem 'devise'
