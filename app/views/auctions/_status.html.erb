@@ -1,6 +1,15 @@
-<% if @product.auction.top_bid.user == current_user.id %>
-  You won the auction!
-<% else %>
-  You lost the auction.
+<% if @product.auction.top_bid.present? %>
+  <% if @product.auction.top_bid.user_id == current_user.id %>
+    <p>
+      You won the auction!
+    </p>
+    <p>
+    <%= link_to 'Claim this product', transfer_product_path(@product), class: 'btn btn-primary', method: :put %>
+    </p>
+  <% else %>
+    <p>
+      You lost the auction.
+    </p>
+  <% end %>
 <% end %>
 

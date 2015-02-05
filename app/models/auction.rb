@@ -7,8 +7,7 @@ class Auction < ActiveRecord::Base
   end
 
   def current_bid
-    #top_bid.nil? ? value : top_bid.value
-    20
+    top_bid.nil? ? value : top_bid.value
   end
 
   def ended?
